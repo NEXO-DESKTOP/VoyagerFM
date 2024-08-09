@@ -85,13 +85,18 @@
       <br style="height: 30px;">
 
       </section>
-      <iframe  class="rightContent_narrow" id="fileWindow" src="/filemanager.html?global=home"></iframe>
+      <section class="rightContent_narrow">
+        <input type="text" id="currentPath" placeholder="Ruta del directorio">
+        <button onclick="navigate()">Navegar</button>
+        <div id="fileList" class="file-list"></div>
+
+      </section>
+
     </main>
 
     <script src="/js/neutralino.js"></script>  <!-- neutralino js file. -->
     <script src="/system.js"></script>  <!-- nexolib js file. -->
     <script src="/js/index.js"></script> <!-- app js file. -->
-    <script src="/js/pairdrop.js"></script> 
     
 
   </body>

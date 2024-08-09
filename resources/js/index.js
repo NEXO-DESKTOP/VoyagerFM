@@ -44,13 +44,33 @@ loadCSV('favfile.csv')
     .catch(error => console.error('Error al cargar el CSV:', error));
 
 
-        // Función para cambiar la URL del iframe
-        function changeIframeUrl(newUrl) {
-            const iframe = document.getElementById('fileWindow');
-            iframe.src = newUrl;
-        }
+// app.js
 
-        // Asignar el event listener a los elementos
-        document.getElementById('sndropBtn').addEventListener('click', function() {
-            changeIframeUrl('https:/pairdrop.net');
+async function navigate() {
+    let path = document.getElementById('currentPath').value;
+    try {
+        let entries = await Neutralino.filesystem.readDirectory(path);
+        let fileList = document.getElementById('fileList');
+        fileList.innerHTML = ''; // Limpiar la lista actual
+        
+        entries.forEach(entry => {
+            let div = document.createElement('div');
+            div.innerText = `${entry.type}: ${entry.entry}`;
+            div.onclick = () => {
+                if(entry.type === 'DIRECTORY') {
+                    document.getElementById('currentPath').value = path + '/' + entry.entry;
+                    navigate(); // Navegar al directorio
+                } else {
+                    alert('Seleccionaste el archivo: ' + entry.entry);
+                }
+            };
+            fileList.appendChild(div);
         });
+    } catch (err) {
+        alert('Error al leer el directorio: ' + err.message);
+    }
+}
+
+// Inicializar en la ruta raíz
+document.getElementById('currentPath').value = NL_PATH;
+navigate();
