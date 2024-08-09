@@ -1,0 +1,8 @@
+bin
+.tmp
+neutralinojs.log
+resources/systemIcons
+resources/icons.ttf
+resources/nexo.css
+.DS_Store
+resources/system.js

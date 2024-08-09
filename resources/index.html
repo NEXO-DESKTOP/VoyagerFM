@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Archivos</title>
+    <link rel="stylesheet" href="/nexo.css"> <!-- nexolib css file. -->
+    <link rel="stylesheet" href="/style.css"> <!-- your css file -->
+  </head>
+  <body>
+
+    <div class="context-menu" id="context-menu">
+      <ul>
+          <li class="context-menu-item">Opción 1</li>
+          <li class="context-menu-item">Opción 2</li>
+          <li class="context-menu-item">Opción 3</li>
+      </ul>
+  </div>
+
+
+    <div id="appBar">
+
+      <div id="windowLeftSector">
+        <button id="backbtn"><span class="sIcons">arrow_back</span></button>
+        <button id="forwardbtn"><span class="sIcons">arrow_forward</span></button>
+        <button id="addbtn"><span class="sIcons">add</span></button>
+        <button id="searchbtn"><span class="sIcons">search</span></button>
+
+      </div>
+
+      <div id="windowCenterSector">
+        <h5 id="appTitle">lucas/</h5>
+      </div>
+
+      <div id="windowRightSector">
+        <button id="favbtn"><span class="sIcons">star</span></button>
+        <button id="viewbtn"><span class="sIcons">stacks</span></button>
+        <button id="sharebtn"><span class="sIcons">share</span></button>
+        <button id="settingsbtn"><span class="sIcons">settings</span></button>
+
+      </div>
+    </div>
+
+    <div id="winButtons">
+      <button id="minbtn"><span class="sIcons">minimize</span></button>
+      <button id="resbtn"><span class="sIcons">open_in_full</span></button>
+      <button id="closebtn"><span class="sIcons">close</span></button>
+    </div>
+
+
+    <main>
+      <section class="leftBar_wide">
+      <h5 class="leftBarSectionText">Recientes</h5>
+
+      <h5 class="leftBarSectionText">Favoritos</h5>
+
+      <div id="fav_fm_bar"></div>
+
+      <h5 class="leftBarSectionText">Lugares</h5>
+
+      <div class="leftBarSectionCard">
+        <span class="sIcons">face</span> Invitados
+      </div>
+
+      <div class="leftBarSectionCard">
+        <span class="sIcons">computer</span> Ordenador
+      </div>
+
+      <div class="leftBarSectionCard">
+        <span class="sIcons">cloud</span> MEGADrive
+      </div>
+      
+      <div id="sndropBtn" class="leftBarSectionCard">
+        <span class="sIcons">radar</span> Cercanos
+      </div>
+
+      <div class="leftBarSectionCard">
+        <span class="sIcons">public</span> Red
+      </div>
+
+      <div class="leftBarSectionCard">
+        <span class="sIcons">delete</span> Papelera 
+      </div>
+
+
+      <br style="height: 30px;">
+
+      </section>
+      <iframe  class="rightContent_narrow" id="fileWindow" src="/filemanager.html?global=home"></iframe>
+    </main>
+
+    <script src="/js/neutralino.js"></script>  <!-- neutralino js file. -->
+    <script src="/system.js"></script>  <!-- nexolib js file. -->
+    <script src="/js/index.js"></script> <!-- app js file. -->
+    <script src="/js/pairdrop.js"></script> 
+    
+
+  </body>
+</html>
